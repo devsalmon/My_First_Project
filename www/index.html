@@ -14,6 +14,20 @@
     </script>
 </head>
 <body>
+<script> 
+function login(){
+var username = document.getElementById("username").value
+var password = document.getElementById("password").value
+  if (username == "user" && password == "pass")
+{
+ons.notification.alert("Password Successful")
+}
+else
+{
+ons.notification.alert ("Password Incorrect")
+}
+}
+</script>
   <ons-page>
  <div style="text-align: center; margin-top: 200px">
  <p>
@@ -21,15 +35,11 @@
  </ons-input>
  </p>
  <p>
- <ons-input
- id="password"
- placeholder="Password"
- type="password"
- modifier="underbar">
+ <ons-input id="password" placeholder="Password" type="password" modifier="underbar">
  </ons-input>
  </p>
  <p>
- <ons-button>Sign in</ons-button>
+ <ons-button onClick='login()'>Sign in</ons-button>
  </p>
  </div>
  </ons-page>
