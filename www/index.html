@@ -20,7 +20,9 @@ var username = document.getElementById("username").value
 var password = document.getElementById("password").value
   if (username == "user" && password == "pass")
 {
-ons.notification.alert("Password Successful")
+//ons.notification.alert("Password Successful")
+var navigator = document.getElementById('navigator');
+navigator.resetToPage('shackleton.html');
 }
 else
 {
@@ -28,7 +30,8 @@ ons.notification.alert ("Password Incorrect")
 }
 }
 </script>
-  <ons-page>
+<ons-navigator id="navigator">
+<ons-page>
  <div style="text-align: center; margin-top: 200px">
  <p>
  <ons-input id="username" placeholder="Username" modifier="underbar">
@@ -43,6 +46,9 @@ ons.notification.alert ("Password Incorrect")
  </p>
  </div>
  </ons-page>
+</ons-navigator>
+<ons-template id="shackleton.html">
+<ons-page id="shackleton">
 <h2>Ernest Shackleton (1874 - 1922)</h2>
 <img src="images/shackletonicon.jpg" alt="image of Ernest Shackleton at Dulwich college" >
 <p>
@@ -54,5 +60,7 @@ He was one of the principal figures of the period known as the Heroic Age of Ant
 <p>
 During his life he made three trips to the Antarctic. As well as climbing Mount Erebus he made many important scientific discoveries. On his fourth expedition to circumnavigate the Antartic he died of a heart attack. He was buried on the Island of South Georgia.
 </p>
+  </ons-page>
+</ons-template>
 </body>
 </html>
