@@ -1,9 +1,18 @@
 <!DOCTYPE HTML>
 <html>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="stylesheet" href="components/loader.css">
+    <script src="components/loader.js"></script>
+</head>
+
+<body>
 <ons-page id=”quiz.html”>
+
   <script>
-      function chk_ans()
+  function chk_ans()
 {
 	my_elem = document.getElementById("ans");
 	my_elem.innerHTML = "800 nautical miles";
@@ -15,13 +24,11 @@
 <p>How far (according to Shackleton's wikipedia page) is it from Elephant Island to South Georgia in Nautical Miles? <span class = "myquote" id = ans></span></p>
 <p> <Button onClick = "chk_ans()">Check Answer</button></p>
 </div>
+
 <ons-toolbar id="home-toolbar">
- <div class="left" onClick=
-"var navigator = document.getElementById('navigator');
-navigator.popPage()">
-Back
-</div>
+<div class="left"> <ons-back-button></ons-back-button> </div>
 </ons-toolbar>
+
 </ons-page>
 </body>
 </html>

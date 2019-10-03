@@ -1,6 +1,15 @@
 <html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="stylesheet" href="components/loader.css">
+    <script src="components/loader.js"></script>
+</head>
+
 <body>
 <ons-page>
+
 <script> 
 function login(){
 var username = document.getElementById("username").value
@@ -17,6 +26,7 @@ ons.notification.alert ("Password Incorrect")
 }
 }
 </script>
+
  <div style="text-align: center; margin-top: 200px">
  <p>
  <ons-input id="username" placeholder="Username" modifier="underbar">
@@ -30,6 +40,7 @@ ons.notification.alert ("Password Incorrect")
  <ons-button onClick='login()'>Sign in</ons-button>
  </p>
  </div>
+ 
  </ons-page>
 </body>
 </html>
