@@ -7,12 +7,21 @@
 <body>
 <ons-page id=”addlocations.html”>
 
-  <script>
- 
+<script>
+  function save_details()
+  {
+  entered_text = document.getElementById("loc_title").value
+  localStorage.setItem('www.me.ti/hi', entered_text );
+  }
   </script>
 
-
-
+<ons-list>
+ <ons-list-header>Type in a name for your location</ons-list-header>
+ <p> <ons-input id="loc_title" modifier="underbar" placeholder= "Enter
+Location Name" ></ons-input></p>
+<ons-list-header>Save the location</ons-list-header>
+ </ons-list>
+ <p> <ons-button id = "Save details" onClick = 'save_details()'>Save</onsbutton></p>
 
 </ons-page>
 </body>
