@@ -8,9 +8,22 @@
 <ons-page id=”mylocations.html”>
 
   <script>
- 
+   function show_title()
+  {
+  var my_value = localStorage.getItem('www.me.ti/hi');
+  //console.log(my_value) (firebase)
+  document.getElementById("my_loc").innerHTML = my_value;
+  var pic_URI = localStorage.getItem("MyAppPicture");
+  var pic = document.getElementById("pic_display");
+  pic.src = pic_URI;
+
+  }
   </script>
 
+<h2 align='center'>My Locations</h2>
+<h3 id='my_loc'></h3>
+ <p><img id='pic_display' height="200px"></p>
+ <ons-button id = "Reveal Location" onClick = 'show_title()'>Refresh</ons-button>
 
 </ons-page>
 </body>
